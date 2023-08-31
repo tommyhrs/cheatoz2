@@ -1,0 +1,29 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icon128.png",
+         "16": "icon16.png",
+         "48": "icon48.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "content.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "description": "I am Cheatoz your AI question solver!.",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlXCdxHTARn9BMSjflcK2G2jfDxvEhKsrirsLeTeN35DPI5xDSNE50n+JJYwH5CGt+CGSdIJ8Du8iD8Mf/TsbSSPoDZJ3zlCnWBurNQcySCwGUz8WUlCvVnooFRoUgkDXMUXYXDfyClPAXRa0XOb7HSoJ4kgPxuylTJZcGBOx+ajANf6HYqlp1KdBksZ86vOD36tTvhnyugAltBhBdfB1FinumZFaqWFsJgJB3gbTLhuI9oOu1A5aqWhxPFz7gUIYzaReh/U4/W89mY4IjWIxwBKYn83KZjQ38OYXK1HGeS+R34fzeHQpCgcYYI46CqHyJCrhqBdLYJCNHXBMZnJpgwIDAQAB",
+   "manifest_version": 3,
+   "name": "Cheatoz",
+   "permissions": [ "activeTab", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.4.0"
+}

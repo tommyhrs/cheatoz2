@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My Extension</title>
+  <script src="popup.js"></script>
+  <style>
+    body {
+      background-color: #003255;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      padding: 10px;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    
+    h2 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    
+    p {
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+      font-weight: bold;
+      color: #c0c0c0;
+    }
+    
+    input[type="text"] {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      background-color: #fff;
+      color: #003255;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+    
+    button[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #ff700a;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    
+    button[type="submit"]:hover {
+      background-color: #ff8c3e;
+    }
+    
+    label[type="text"] {
+      color: #fff;
+    }
+    
+    #popupContainer {
+      background-color: #003255;
+      border-radius: 10px;
+      padding: 1px;
+      min-width: 200px;
+    }
+    
+    #successMessage {
+      text-align: center;
+      color: #00ff00;
+      font-size: 24px;
+    }
+    
+    #errorMessage {
+      text-align: center;
+      color: #ff0000;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    
+    #buyButtonContainer {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    #buyButton,
+    #manageSubscriptionsButton,
+    button#editKeysButton {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff700a;
+      color: #003255;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    
+    #buyButton:hover,
+    #manageSubscriptionsButton:hover,
+    button#editKeysButton:hover {
+      background-color: #ff700a;
+    }
+    
+    #buyButton,
+    #manageSubscriptionsButton,
+    button#editKeysButton {
+      margin-right: 10px;
+    }
+    
+    #buyButtonContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    #imageContainer {
+      text-align: center;
+      margin-bottom: 20px;
+      max-width: 100%; /* Set a maximum width for the image container */
+    }
+
+    #extensionImage {
+      max-width: 100%; /* Set the image width to be responsive within the container */
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="popupContainer">
+    <div id="imageContainer">
+      <img id="extensionImage" src="icon128.png" alt="Cheatoz Extension">
+    </div>
+    <h1>Cheatoz</h1>
+    <p>Select a question on a webpage and hold the left mouse button for 2 seconds to get an answer.</p>
+    <h2 id='headerai'>Enter OpenAI API Key</h2>
+    <div id="apiKeyContainer">
+      <form id="apiKeyForm">
+        <input type="text" id="apiKey" name="apiKey" placeholder="Enter API Key" />
+        <input type="text" id="licenseKey" name="licenseKey" placeholder="Enter License Key" />
+        <button type="submit">Save</button>
+      </form>
+    </div>
+    <div id="successMessage"></div>
+    <div id="errorMessage"></div>
+    <div id="buyButtonContainer">
+      <button id="buyButton">Buy Cheatoz</button>
+      <button id="editKeysButton" style="display: none;">Edit Keys</button>
+      <button id="manageSubscriptionsButton" style="display: none;">Manage Subscription</button>
+    </div>
+  </div>
+</body>
+</html>
